@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="CoffeeBrewing.Contracts.States.CoffeeMachineCleaningState" Collapsed="true">
+    <Position X="8.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>States\CoffeeMachineCleaningState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoffeeBrewing.Contracts.States.CoffeeMachineBrewingState" Collapsed="true">
+    <Position X="10.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>States\CoffeeMachineBrewingState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoffeeBrewing.Contracts.States.CoffeeMachineIdledState" Collapsed="true">
+    <Position X="12.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>States\CoffeeMachineIdledState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoffeeBrewing.Contracts.States.CoffeeMachineOperationalState" Collapsed="true">
+    <Position X="10.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>States\CoffeeMachineOperationalState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoffeeBrewing.Contracts.States.CoffeeMachineInitializingState" Collapsed="true">
+    <Position X="15" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>States\CoffeeMachineInitializingState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoffeeBrewing.Contracts.States.CoffeeMachineUninitializedState" Collapsed="true">
+    <Position X="17.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>States\CoffeeMachineUninitializedState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoffeeBrewing.Contracts.States.CoffeeMachineState" Collapsed="true">
+    <Position X="12.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>States\CoffeeMachineState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoffeeBrewing.Contracts.States.HeaterHeatingState" Collapsed="true">
+    <Position X="3" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>States\HeaterHeatingState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoffeeBrewing.Contracts.States.HeaterState" Collapsed="true">
+    <Position X="4.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>States\HeaterState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoffeeBrewing.Contracts.States.HeaterIdleState" Collapsed="true">
+    <Position X="5.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>States\HeaterIdleState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="CoffeeBrewing.Contracts.ICoffeeMachine">
+    <Position X="7" Y="2.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>ACAEAAAAAACAAAAAAAIAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>ICoffeeMachine.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CoffeeBrewing.Contracts.IBeanContainer">
+    <Position X="4.25" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>IBeanContainer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CoffeeBrewing.Contracts.IWaterPump">
+    <Position X="10.5" Y="4.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IWaterPump.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CoffeeBrewing.Contracts.IGrinder">
+    <Position X="10.25" Y="2.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IGrinder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CoffeeBrewing.Contracts.IHeater">
+    <Position X="4.5" Y="6.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AACAAQAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IHeater.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CoffeeBrewing.Contracts.ICoffeeMachineRepository">
+    <Position X="14.5" Y="2.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ICoffeeMachineRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
