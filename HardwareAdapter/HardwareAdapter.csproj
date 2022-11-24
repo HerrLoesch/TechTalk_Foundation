@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Zeiss.Foundation.ApplicationFrame.Contracts" Version="3.1.0-CI-20221118-112022" />
+    <PackageReference Include="Zeiss.Foundation.Frame.Contracts" Version="3.1.0-CI-20221118-112022" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CoffeeBrewing.Contracts\CoffeeBrewing.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

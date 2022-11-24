@@ -1,0 +1,9 @@
+﻿<implementation:ApplicationBase x:Class="Starter.App"
+                                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                                  xmlns:local="clr-namespace:Starter"
+                                  xmlns:implementation="clr-namespace:Zeiss.Semi.Mask.Foundation.ApplicationFrame.Implementation;assembly=Zeiss.Semi.Mask.Foundation.ApplicationFrame.Implementation">
+    <implementation:ApplicationBase.Resources>
+         
+    </implementation:ApplicationBase.Resources>
+</implementation:ApplicationBase>
