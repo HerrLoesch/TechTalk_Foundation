@@ -4,7 +4,6 @@
 
 using CoffeeBrewing.Contracts;
 using CoffeeBrewing.Contracts.States;
-using Zeiss.Semi.Mask.Foundation.Common.Contracts.ErrorHandling;
 using Zeiss.Semi.Mask.Foundation.MachineInterfaces.Contracts.Actuators;
 
 namespace HardwareAdapter;
@@ -25,16 +24,5 @@ public class CoffeeMachine : Actuator<CoffeeMachineState>, ICoffeeMachine
         WaterPump = waterPump;
         Grinder = grinder;
         Heater = heater;
-    }
-
-    public async Task<Result> CleanAsync()
-    {
-        this.State = new CoffeeMachineCleaningState();
-
-        await Task.Delay(TimeSpan.FromSeconds(4));
-
-        this.State = new CoffeeMachineIdledState();
-        
-        return Result.Success();
     }
 }

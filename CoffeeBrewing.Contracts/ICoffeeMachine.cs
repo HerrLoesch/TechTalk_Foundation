@@ -17,6 +17,4 @@ public interface ICoffeeMachine : IActuator<CoffeeMachineState>
     IGrinder Grinder { get; }
 
     IHeater Heater { get; }
-
-    Task<Result> CleanAsync();
 }
