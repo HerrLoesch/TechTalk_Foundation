@@ -4,55 +4,61 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:CoffeeBrewing.UserInterface"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
              xmlns:mvvm="clr-namespace:Zeiss.Semi.Mask.Foundation.Common.UserInterface.Contracts.Mvvm;assembly=Zeiss.Semi.Mask.Foundation.Common.UserInterface.Contracts"
              mc:Ignorable="d" 
              mvvm:ViewModelLocator.AutoWireViewModel="true"
              d:DesignHeight="450" d:DesignWidth="800">
+    
+        <i:Interaction.Triggers>
+            <i:EventTrigger EventName="Loaded">
+                <i:InvokeCommandAction Command="{Binding Path=InitializeCommand, Mode=OneWay}"/>
+            </i:EventTrigger>
+        </i:Interaction.Triggers>
+
     <Grid>
         <TextBlock Text="{Binding Text}"></TextBlock>
         <Canvas >
             <Rectangle Height="367" Stroke="Black" Width="265" Canvas.Left="53" Canvas.Top="29"/>
 
             <ComboBox Canvas.Left="62" Canvas.Top="42" Width="120" />
-            <Label Content="Label" Canvas.Left="187" Canvas.Top="42" HorizontalAlignment="Left" VerticalAlignment="Center" Width="121"/>
+            <Label Content="{Binding CoffeeMachine.State.DisplayName}" Canvas.Left="187" Canvas.Top="42" HorizontalAlignment="Left" VerticalAlignment="Center" Width="121"/>
 
-            <Button Content="Brew" Canvas.Left="61" Canvas.Top="79" Width="121" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button Content="Brew" Command="{Binding BrewCommand}" Canvas.Left="61" Canvas.Top="79" Width="121" HorizontalAlignment="Center" VerticalAlignment="Top"/>
 
 
             <Border Background="LightBlue" Height="100" Width="121" Canvas.Left="61" Canvas.Top="289" BorderBrush="Black">
                 <StackPanel VerticalAlignment="Center">
-                    <TextBlock HorizontalAlignment="Center">Name</TextBlock>
-                    <TextBlock HorizontalAlignment="Center">State</TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Text="{Binding CoffeeMachine.WaterPump.Name}" />
+                    <TextBlock HorizontalAlignment="Center" Text="{Binding CoffeeMachine.WaterPump.State.DisplayName}" />
                 </StackPanel>
             </Border>
 
             <Border Background="Gray" Height="100" BorderBrush="Black" Width="121" Canvas.Left="61" Canvas.Top="184">
                 <StackPanel VerticalAlignment="Center">
-                    <TextBlock HorizontalAlignment="Center">Name</TextBlock>
-                    <TextBlock HorizontalAlignment="Center">State</TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Text="{Binding CoffeeMachine.Heater.Name}" />
+                    <TextBlock HorizontalAlignment="Center" Text="{Binding CoffeeMachine.Heater.State.DisplayName}" />
                 </StackPanel>
             </Border>
 
             <Border Background="SaddleBrown" Height="100" BorderBrush="Black" Width="121" Canvas.Left="187" Canvas.Top="79">
                 <StackPanel VerticalAlignment="Center">
-                    <TextBlock HorizontalAlignment="Center">Name</TextBlock>
-                    <TextBlock HorizontalAlignment="Center">State</TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Text="{Binding CoffeeMachine.BeanContainer.Name}" />
+                    <TextBlock HorizontalAlignment="Center" Text="{Binding CoffeeMachine.BeanContainer.State.DisplayName}" />
                 </StackPanel>
             </Border>
 
             <Border Background="RosyBrown" Height="100" BorderBrush="Black" Width="121" Canvas.Left="187" Canvas.Top="184">
                 <StackPanel VerticalAlignment="Center">
-                    <TextBlock HorizontalAlignment="Center">Name</TextBlock>
-                    <TextBlock HorizontalAlignment="Center">State</TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Text="{Binding CoffeeMachine.Grinder.Name}" />
+                    <TextBlock HorizontalAlignment="Center" Text="{Binding CoffeeMachine.Grinder.State.DisplayName}" />
                 </StackPanel>
             </Border>
+
             <Border Background="DarkGray" Height="100" BorderBrush="Black" Width="121" Canvas.Left="187" Canvas.Top="289">
                 <StackPanel VerticalAlignment="Center">
-                    <TextBlock HorizontalAlignment="Center">Name</TextBlock>
-                    <TextBlock HorizontalAlignment="Center">State</TextBlock>
+                    <TextBlock HorizontalAlignment="Center">Waste</TextBlock>
                 </StackPanel>
-
-                
             </Border>
 
 

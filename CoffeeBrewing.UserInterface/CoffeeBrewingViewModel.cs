@@ -1,14 +1,38 @@
-﻿using Zeiss.Semi.Mask.Foundation.Common.UserInterface.Contracts.Mvvm;
+﻿using System.Windows.Input;
+using CoffeeBrewing.Contracts;
+using Zeiss.Semi.Mask.Foundation.Common.UserInterface.Contracts.Mvvm;
 
 namespace CoffeeBrewing.UserInterface
 {
     public class CoffeeBrewingViewModel : BindableBase
     {
-        public string Text { get; set; }
+        private readonly ICoffeeMachineRepository coffeeMachineRepository;
+        private ICoffeeMachine coffeeMachine = null!;
 
-        public CoffeeBrewingViewModel()
+        public CoffeeBrewingViewModel(ICoffeeMachineRepository coffeeMachineRepository)
         {
-            Text = "Hallo Welt";
+            this.coffeeMachineRepository = coffeeMachineRepository;
+            this.BrewCommand = new DelegateCommand(this.Brew);
+            this.InitializeCommand = new DelegateCommand(this.Initialize);
         }
+        
+        public void Initialize()
+        {
+            this.CoffeeMachine = coffeeMachineRepository.GetCoffeeMachine();
+        }
+
+        private void Brew()
+        {
+            
+        }
+
+        public ICoffeeMachine CoffeeMachine
+        {
+            get => coffeeMachine;
+            private set => this.SetProperty(ref this.coffeeMachine, value);
+        }
+
+        public ICommand InitializeCommand { get; set; }
+        public ICommand BrewCommand { get; set; }
     }
 }
