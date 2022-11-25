@@ -9,11 +9,11 @@ using Zeiss.Semi.Mask.Foundation.SequenceEngine.Implementation.Contracts;
 
 namespace CoffeeBrewing.Implementation.BrewingSteps;
 
-public class Clean : ISequenceStep<CoffeeRecipe>
+public class CleanStep : ISequenceStep<CoffeeRecipe>
 {
     private ICoffeeMachineRepository coffeeMachineRepository;
 
-    public Clean(ICoffeeMachineRepository coffeeMachineRepository)
+    public CleanStep(ICoffeeMachineRepository coffeeMachineRepository)
     {
         this.coffeeMachineRepository = coffeeMachineRepository;
     }

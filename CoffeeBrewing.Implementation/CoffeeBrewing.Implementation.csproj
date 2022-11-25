@@ -15,8 +15,4 @@
     <ProjectReference Include="..\CoffeeBrewing.Contracts\CoffeeBrewing.Contracts.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="BrewingSteps\" />
-  </ItemGroup>
-
 </Project>
