@@ -2,6 +2,9 @@
 //   © ZEISS. All rights reserved.
 // </copyright>
 
+using CoffeeBrewing.Contracts;
+using CoffeeBrewing.Implementation;
+using CoffeeBrewing.Implementation.BrewingSteps;
 using Zeiss.Semi.Mask.Foundation.ApplicationFrame.Contracts.Regions;
 using Zeiss.Semi.Mask.Foundation.Common.Contracts.ErrorHandling;
 using Zeiss.Semi.Mask.Foundation.Common.Contracts.IoC;
@@ -16,6 +19,13 @@ public class CoffeeBrewingModule : ModuleBase
         containerRegistry.Register<CoffeeBrewingView>();
         containerRegistry.Register<CoffeeBrewingViewModel>();
 
+        containerRegistry.Register<IBrewingService, BrewingService>();
+        containerRegistry.Register<BrewingSequenceBuilder>();
+
+        containerRegistry.Register<HeatWaterStep>();
+        containerRegistry.Register<GrindStep>();
+        containerRegistry.Register<CleanStep>();
+        
         return base.RegisterTypesAsync(containerRegistry);
     }
 
