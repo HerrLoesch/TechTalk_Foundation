@@ -26,11 +26,6 @@ public class Heater : Actuator<HeaterState>, IHeater
 
     public async Task<Result> StartHeatingAsync(Temperature targetTemperature)
     {
-        if (this.State is HeaterHeatingState)
-        {
-            return Result.Failure(new Failure("Heater is already heating!"));
-        }
-
         CancelTimerAndReset();
 
         this.State = new HeaterHeatingState();

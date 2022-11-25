@@ -43,8 +43,8 @@
 
             <Border Background="SaddleBrown" Height="100" BorderBrush="Black" Width="121" Canvas.Left="187" Canvas.Top="79">
                 <StackPanel VerticalAlignment="Center">
-                    <TextBlock HorizontalAlignment="Center" Text="{Binding CoffeeMachine.BeanContainer.Name}" />
-                    <TextBlock HorizontalAlignment="Center" Text="{Binding CoffeeMachine.BeanContainer.State.DisplayName}" />
+                    <TextBlock HorizontalAlignment="Center" Text="{Binding CoffeeMachine.BeanContainer.Name, Mode=OneWay}" />
+                    <TextBlock HorizontalAlignment="Center" Text="{Binding CoffeeMachine.BeanContainer.State.DisplayName, Mode=OneWay}" />
                 </StackPanel>
             </Border>
 

@@ -13,7 +13,7 @@ public class HardwareAdapterModule : ModuleBase
 {
     public override Task<Result> RegisterTypesAsync(IContainerRegistry containerRegistry)
     {
-        containerRegistry.Register<ICoffeeMachineRepository, CoffeeMachineRepository>();
+        containerRegistry.RegisterSingleton<ICoffeeMachineRepository, CoffeeMachineRepository>();
 
         return base.RegisterTypesAsync(containerRegistry);
     }

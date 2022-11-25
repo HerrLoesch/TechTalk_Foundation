@@ -18,7 +18,11 @@ public class WaterPump : Actuator<WaterPumpState>, IWaterPump
 
     public async Task<Result> PumpAsync(Volume volume)
     {
+        this.State = new WaterPumpPumpingState();
+
         await Task.Delay(TimeSpan.FromSeconds(4));
+
+        this.State = new WaterPumpIdleState();
 
         return Result.Success();
     }
