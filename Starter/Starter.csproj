@@ -16,6 +16,7 @@
   <ItemGroup>
     <ProjectReference Include="..\CoffeeBrewing.UserInterface\CoffeeBrewing.UserInterface.csproj" />
     <ProjectReference Include="..\HardwareAdapter\HardwareAdapter.csproj" />
+    <ProjectReference Include="..\Statistics.UserInterface\Statistics.UserInterface.csproj" />
   </ItemGroup>
 
   <ItemGroup>

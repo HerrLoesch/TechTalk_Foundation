@@ -4,6 +4,7 @@
 
 using CoffeeBrewing.UserInterface;
 using HardwareAdapter;
+using Statistics.UserInterface;
 using Zeiss.Semi.Mask.Foundation.Common.Contracts.ErrorHandling;
 using Zeiss.Semi.Mask.Foundation.Common.Contracts.Logging;
 using Zeiss.Semi.Mask.Foundation.Frame.Contracts.Modularity;
@@ -20,12 +21,15 @@ internal sealed class CustomModuleSetup : ModuleSetup
     protected override Result<IModuleCatalog> CreateModuleCatalog(IAssemblyProvider assemblyProvider)
     {
         var moduleCatalog = new ModuleCatalog();
-
+        
         var brewingModule = ModuleInfo.CreateFromType<CoffeeBrewingModule>();
         moduleCatalog.AddModule(brewingModule);
 
         var hardwareModule = ModuleInfo.CreateFromType<HardwareAdapterModule>();
         moduleCatalog.AddModule(hardwareModule);
+
+        var statisticsModule = ModuleInfo.CreateFromType<StatisticsModule>();
+        moduleCatalog.AddModule(statisticsModule);
 
         return Result.Success((IModuleCatalog)moduleCatalog);
     }

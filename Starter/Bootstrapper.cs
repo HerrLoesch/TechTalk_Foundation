@@ -22,6 +22,8 @@ public class Bootstrapper : ApplicationStartupBase
 
     public override Result RegisterTypes(IContainerRegistry containerRegistry)
     {
+        containerRegistry.Register<MainWindow>();
+        containerRegistry.Register<MainViewModel>();
         return Result.Success();
     }
 

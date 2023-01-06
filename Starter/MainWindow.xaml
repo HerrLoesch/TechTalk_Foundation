@@ -7,7 +7,11 @@
         xmlns:regions="clr-namespace:Zeiss.Semi.Mask.Foundation.ApplicationFrame.Implementation.Regions;assembly=Zeiss.Semi.Mask.Foundation.ApplicationFrame.Implementation"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <ContentControl regions:RegionManager.RegionName="MainRegion">
-
-    </ContentControl>
+    <DockPanel LastChildFill="True">
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Command="{Binding BrewingCommand}" Header="Brewing"></MenuItem>
+            <MenuItem Command="{Binding StatisticsCommand}" Header="Statistics"></MenuItem>
+        </Menu>
+        <ContentControl regions:RegionManager.RegionName="MainRegion" />
+    </DockPanel>
 </Window>

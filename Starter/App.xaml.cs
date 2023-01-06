@@ -27,7 +27,8 @@ namespace Starter
 
         protected override Result<Window> CreateShell(IContainerProvider containerProvider)
         {
-            return Result.Success((Window)new MainWindow());
+            var mainWindow = containerProvider.Resolve<MainWindow>();
+            return Result.Success((Window)mainWindow);
         }
 
         protected override ApplicationStartupBase CreateStartup()
